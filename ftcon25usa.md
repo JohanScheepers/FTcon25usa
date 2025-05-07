@@ -1,0 +1,666 @@
+# Flutterconusa 2025
+
+# Table of Contents
+* [1. Simon Lightfoot](#1simon-lightfoot)
+  * [Flutter Best Practices: Widget Rebuilds & Animations & Complex UI Rendering](#1simon-lightfoot)
+* [2. Matt Carroll](#2matt-carroll)
+  * [Flutter's Golden Age](#2matt-carroll)
+  * [How to build a desktop widget kit for Flutter apps](#2matt-carroll)
+  * [Multi-Platform Development with Native Feature Integration in Flutter](#2matt-carroll)
+* [3. Pooja Bhaumik](#3pooja-bhaumik)
+  * [Breaking Production So You Don’t Have To: Lessons from Building a Supabase Powered Flutter app](#3pooja-bhaumik)
+* [4. Chris Sells](#4chris-sells)
+  * [Contributing to the Flutter Ecosystem: Open Source & Community Growth](#4chris-sells)
+  * [More Flutter and Dart and AI, Oh My!](#4chris-sells)
+* [5. Andrew Brogdon](#5andrew-brogdon)
+  * [Agentive Experiences With Flutter: What, How, and Why Bother?](#5andrew-brogdon)
+  * [Flutter Team Q&A](#5andrew-brogdon)
+* [6. Manuela Sakura Rommel](#6manuela-sakura-rommel)
+  * [Deep Dive into Semantics Widget](#6manuela-sakura-rommel)
+* [7. Dominik Roszkowski](#7dominik-roszkowski)
+  * [Architecting Your App Around Local Database](#7dominik-roszkowski)
+* [8. Danielle Cox](#8danielle-cox)
+  * [Beyond json_serializable: Modern JSON Handling in a Macro-less Flutter Era](#8danielle-cox)
+  * [Flutteristas Panel: Reimagining DEI](#8danielle-cox)
+* [9. Frank van Puffelen](#9frank-van-puffelen)
+  * [Vibing Flutter](#9frank-van-puffelen)
+* [10. Maria Mathew](#10maria-mathew)
+  * [Mastering Dart Isolates: Custom Entrypoints for Smarter Background Processing](#10maria-mathew)
+* [11. Jeff Ward](#11jeff-ward)
+  * [Binding Native Plugins with Flutter and Dart](#11jeff-ward)
+* [12. Bettina Carrizo](#12bettina-carrizo)
+  * [Flutteristas Panel: Reimagining DEI](#12bettina-carrizo)
+  * [Getting into Context: The Essential Guide to BuildContext in Flutter](#12bettina-carrizo)
+* [13. Hillel Coren](#13hillel-coren)
+  * [Lessons learned building Invoice Ninja - Part 2](#13hillel-coren)
+* [14. Joonas Kerttula](#14joonas-kerttula)
+  * [Behind the Plugin: Building Google Maps Navigation for Flutter](#14joonas-kerttula)
+* [15. Robert Odrowaz-Sypniewski](#15robert-odrowaz-sypniewski)
+  * [Using Dart FFI for Compute-Heavy Tasks in Flutter Apps](#15robert-odrowaz-sypniewski)
+* [16. Clint Purser](#16clint-purser)
+  * [Remote Controlling Robots with Flutter & WebRTC](#16clint-purser)
+* [17. Maneesh Tewani](#17maneesh-tewani)
+  * [Enhance the customer experience with Gemini, Flutter, and Firebase](#17maneesh-tewani)
+  * [Generating Developer-Friendly SDKs with Firebase Data Connect](#17maneesh-tewani)
+* [18. Norbert Kozsir](#18norbert-kozsir)
+  * [Vibe Coding with Flutter](#18norbert-kozsir)
+* [19. Mitchell Goodwin](#19mitchell-goodwin)
+  * [Flutter Team Q&A](#19mitchell-goodwin)
+* [20. Rona Kilmer](#20rona-kilmer)
+  * [Flutteristas Panel: Reimagining DEI](#20rona-kilmer)
+* [21. Fré Dumazy](#21fré-dumazy)
+  * [From Mobile to Web: Reusing Flutter via Multi-View Embedding](#21fré-dumazy)
+* [22. Juan Manuel Silveira](#22juan-manuel-silveira)
+  * [From Math to Dynamic UIs: Applying Matrix4 Transformations in Flutter](#22juan-manuel-silveira)
+* [23. Sofía Rey](#23sofía-rey)
+* [24. Samantha O'Brien](#24samantha-obrien)
+  * [Multi-Platform Development with Native Feature Integration in Flutter](#24samantha-obrien)
+* [25. Roman Jaquez](#25roman-jaquez)
+  * [Flutter Best Practices: Widget Rebuilds & Animations & Complex UI Rendering](#25roman-jaquez)
+  * [Rive: The Final Frontier of Graphics for Flutter Apps](#25roman-jaquez)
+* [26. Ahmed Hamdan](#26-ahmed-hamdan)
+  * [Multi-Radio Flutter: Architecting Apps with UWB, BLE, and Beyond](#26-ahmed-hamdan)
+* [27. Eric Windmill](#27eric-windmill)
+  * [Flutter Team Q&A](#27eric-windmill)
+* [28. Greg Price](#28greg-price)
+  * [Writing better tests with less work](#28greg-price)
+* [29. Mrinal Jain](#29mrinal-jain)
+  * [Build Spectacular TV Apps with Flutter](#29mrinal-jain)
+* [30. James O'Reilly](#30james-oreilly)
+  * [Firebase Studio: AI-Powered Flutter Development Abstract:](#30james-oreilly)
+* [31. Martino Yovo](#31martino-yovo)
+  * [When Maps Think: Geotriggers & Spatial Awareness with ArcGIS Maps SDK for Flutter](#31martino-yovo)
+* [32. Mangirdas Kazlauskas](#32mangirdas-kazlauskas)
+* [33. Anthony Prakash](#33anthony-prakash)
+  * [Emerging Trends and the Future of Flutter](#33anthony-prakash)
+* [34. Simon Binder](#34simon-binder)
+  * [Adopting native assets for cross-platform FFI plugins](#34simon-binder)
+* [35. Kali](#35kali)
+  * [Flutteristas Panel: Reimagining DEI](#35kali)
+  * [Getting to know js_interop](#35kali)
+* [36. Lawrence Wisne](#36-lawrence-wisne)
+  * [Adopting Flutter at Scale: Challenges, Wins, and the Road Ahead at Universal](#36-lawrence-wisne)
+* [37. Aniket Bhosale](#37aniket-bhosale)
+  * [Mastering Dart Isolates: Custom Entrypoints for Smarter Background Processing](#37aniket-bhosale)
+* [38. Mauricio Miguez](#38mauricio-miguez)
+  * [Mastering Scalable Theming for Custom Flutter Widgets](#38mauricio-miguez)
+* [39. Randal Schwartz](#39randal-schwartz)
+  * [Dart Exceptions: Best Practices](#39randal-schwartz)
+* [40. Lucas Josefiak](#40lucas-josefiak)
+  * [Simplify app development by building widgets in isolation](#40lucas-josefiak)
+* [41. Aloïs Deniel](#41aloïs-deniel)
+  * [From Vectors to Pixels: mastering images](#41aloïs-deniel)
+* [42. Valentina Llavayol](#42valentina-llavayol)
+  * [From Math to Dynamic UIs: Applying Matrix4 Transformations in Flutter](#42valentina-llavayol)
+* [43. Angjelko Miloshevski](#43angjelko-miloshevski)
+  * [The Sacred Scrolls: Crafting Your Own Slivers](#43angjelko-miloshevski)
+* [44. Leo Farias](#44leo-farias)
+  * [The Fleeting Interface: Ephemeral UIs That Learn, Adapt to Context and Usage Patterns, and Vanish](#44leo-farias)
+* [45. Mauricio Miguez](#45mauricio-miguez-1)
+  * [Mastering Scalable Theming for Custom Flutter Widgets](#45mauricio-miguez-1)
+
+# Talks
+
+## 1.Simon Lightfoot
+
+### Flutter Best Practices: Widget Rebuilds & Animations & Complex UI Rendering
+
+Join this unconference-style session designed for interactive group discussion. Whether you want to share your insights or simply learn from others, everyone is welcome in this community-driven learning experience.
+
+What causes excessive widget rebuilds, and how can developers minimize them?
+What are the best practices for structuring widgets efficiently for performance?
+What are the common performance bottlenecks you encounter when implementing complex animations and UI elements in Flutter?
+What techniques do you use to optimize animation performance and reduce jank?
+How do you profile and debug rendering performance issues in Flutter?
+What improvements could be made to Flutter's rendering engine and animation APIs to improve performance and developer experience?
+How can developers handle responsive design across different screen sizes?
+
+## 2.Matt Carroll
+
+
+### Flutter's Golden Age
+
+Golden tests are a great tool, but are poorly understood, and rarely used. This talk takes a deep dive into how golden tests are implemented by Flutter, surveys common difficulties when using golden tests, and introduces new tools built by the Flutter Bounty Hunters to solve those common problems.
+
+### How to build a desktop widget kit for Flutter apps
+
+Material and Cupertino are the most popular widget kits in Flutter. But those widget kits are primarily mobile-oriented. The community needs a greater selection of desktop-oriented widget kits. In this talk, you will learn about many of the UI and UX responsibilities that come with creating desktop widgets, as we explore offerings from Lucid, a desktop widget kit for Flutter apps.
+
+### Multi-Platform Development with Native Feature Integration in Flutter
+
+What are the biggest challenges when targeting mobile, web, and desktop from a single codebase?
+What are the most common challenges you face when integrating native platform features (e.g., specific hardware access, platform APIs) into your Flutter apps?"
+What approaches exist for building hybrid apps that mix Flutter with existing native code?
+How do plugin dependencies and package support vary across platforms?
+What tools and libraries help streamline multi-platform development?
+
+## 3.Pooja Bhaumik
+
+### Breaking Production So You Don’t Have To: Lessons from Building a Supabase Powered Flutter app
+
+Supabase gives you a powerful PostgreSQL backend out of the box—but that power comes with risky responsibilities.
+In this session, I’ll talk about real-world lessons from building and scaling a production Flutter app with Supabase, focusing on four areas where things can and do break if you’re not careful: schema design, row-level security, edge functions, and performance.
+
+You’ll learn:
+- Why not planning foreign key relationships early on can block feature rollouts later
+- The difference between a working RLS policy and a secure one, and how I accidentally exposed private data to the wrong users
+- How writing logic in the wrong place (client vs function) caused avoidable downtime and security risks
+- How RPC & Edge Functions helped offload expensive client operations for faster UX
+
+
+Join this talk to learn some PostgreSQL tips, and practical fixes to keep your Supabase-backed Flutter app fast, secure, and production-ready.
+
+## 4.Chris Sells
+
+### Contributing to the Flutter Ecosystem: Open Source & Community Growth
+
+Join this unconference-style session designed for interactive group discussion. Whether you want to share your insights or simply learn from others, everyone is welcome in this community-driven learning experience.
+
+How can developers get started with contributing to Flutter’s open-source projects?
+What are the best ways to build and maintain Flutter packages and plugins?
+What are some inspiring success stories from developers who contributed to Flutter and advice?
+How do contributions to Flutter help boost a developer’s career and visibility?
+What are the challenges and rewards of maintaining open-source projects in the Flutter ecosystem?
+
+### More Flutter and Dart and AI, Oh My!
+
+AI is moving very fast and a lot has changed even since the first "Flutter and Dart and AI, Oh My" talk in September of 2024. In this talk, I'll update you on the state of the Flutter AI Toolkit, how to use it with both closed and open source LLMs and how to extend it for us with your apps and data.
+
+In addition, I'm going to show you tools and techniques you can use as a Dart and Flutter developer to fast-forward your development using the latest AI tooling. This talk will be filled with demos -- it's not one you're going to want to miss!
+
+## 5.Andrew Brogdon
+
+### Agentive Experiences With Flutter: What, How, and Why Bother?
+
+We're entering a new era of interactive applications, where user interfaces are not just passive displays but active collaborators. This talk explores how Flutter developers can build powerful 'agentive experiences' that anticipate user needs and proactively guide them, transforming static apps into dynamic, intelligent partners. Prepare for this new paradigm as Andrew examines,  
+
+What is an Agentive Experience? 
+The Value of Agentive Experiences: Measuring Impact 
+Reusable Patterns for Implementing Agentive Workflows in Flutter 
+Privacy and Ethical Considerations in Agentive Design 
+The Future of Agentive Flutter Applications
+
+### Flutter Team Q&A
+
+Q&A session with members of the Flutter team. Panel members are from the developer relations team, the framework team, and management.
+
+## 6.Manuela Sakura Rommel
+
+### Deep Dive into Semantics Widget
+
+Let’s take a deep dive into Flutter’s Semantics Widget and see how it helps with accessibility and screen readers. I’ll walk you through how semantics work under the hood, how to use semantic widget to improve the user experience, and some best practices for making apps more inclusive. Whether you’re just starting with accessibility or want to fine-tune your implementation, this talk will give you the tools to make your Flutter apps more usable for everyone.
+
+## 7.Dominik Roszkowski
+
+### Architecting Your App Around Local Database
+
+Let me introduce you to a paradigm that has always been present in consumer apps, yet it has never become mainstream in the Flutter ecosystem. Using local storage as the core of your app - despite a common misconception - can make your life easier. Let's explore how you can integrate a local database with your state management system of choice and learn the important traits for interacting with home screen widgets, background tasks, or push notifications.
+No matter what storage library you choose, you can make your life more convenient, while your users will get significantly better experience.
+
+## 8.Danielle Cox
+
+### Beyond json_serializable: Modern JSON Handling in a Macro-less Flutter Era
+
+After the disappointing (if understandable) decision to abandon macros, what can we do about json serialization?  This talk will discuss the current state of the art for using json in our applications including existing packages, rolling our own, and that part of macros that will survive.
+
+### Flutteristas Panel: Reimagining DEI
+
+Join the Flutteristas as we discuss the limitations of current DEI efforts and where well-intentioned initiatives may have fallen short. We’ll look at how we can move beyond checking boxes and get back to the original spirit of DEI.
+
+## 9.Frank van Puffelen
+
+### Vibing Flutter
+
+Vibe code, no-code, lo-code - the one thing these all still mention is: code. Code is the lingua franca for telling computers what to do. But as all these tools continue to evolve, is code really still the best language for that?
+
+## 10.Maria Mathew
+
+### Mastering Dart Isolates: Custom Entrypoints for Smarter Background Processing
+Key Takeaways and Learning Points
+
+- A deep technical look at Dart isolates, Flutter runtime, and app execution on Android/iOS
+- How the Dart runtimes start executing on Native App launches
+- Understanding the Dart isolate entry-point and customizing it for your app's needs
+- Creating custom isolates triggered by geofences, notifications, or background tasks
+- Real-world techniques to optimize resource sharing between isolates
+
+## 11.Jeff Ward
+
+### Binding Native Plugins with Flutter and Dart
+
+Sometimes in Flutter, you need to access a native system, library, or API that doesn’t already have a Pub package available to you, so you have to bind it yourself.  Dart and Flutter provide several different methods for leveraging native libraries and APIs: Method Channels, JS Interop, FFI to C, FFI gen to Swift and Objective-C, and JNIgen. Which one is right for your use case?  This talk will take a look at the various methods for plugin development, their benefits and drawbacks, and some gotchas you might run into when developing complex plugins.
+
+## 12.Bettina Carrizo
+
+### Flutteristas Panel: Reimagining DEI
+
+Join the Flutteristas as we discuss the limitations of current DEI efforts and where well-intentioned initiatives may have fallen short. We’ll look at how we can move beyond checking boxes and get back to the original spirit of DEI.
+
+### Getting into Context: The Essential Guide to BuildContext in Flutter
+
+Have you ever been puzzled by the error "called on null BuildContext"? Or perhaps you've struggled to make Navigator.of(context) work as expected? These are just a few of the many common issues that arise when BuildContext is misused in Flutter.
+
+In this talk, we’ll start from the very basics and demystify what BuildContext actually is and how it functions within the widget tree. You’ll learn why BuildContext is crucial for navigating, managing states, and maintaining a smooth UI in your Flutter apps. We'll explore common mistakes, like using the wrong context after async operations or outside the widget lifecycle, and discuss what goes wrong when these mistakes happen.
+
+You’ll also get insights into handling BuildContext correctly when dealing with dialogs or modals. I’ll walk you through real-world examples to explain how to use BuildContext safely and effectively, ensuring you can write more robust and scalable Flutter code.
+
+By the end of this session, you'll not only understand the underlying mechanics of BuildContext, but you’ll also have a solid strategy for preventing the most common issues developers face, empowering you to build better, more maintainable Flutter apps.
+
+Key Takeaways:
+- Understand what BuildContext truly is and how it drives widget management and navigation in Flutter apps.
+- Learn to identify frequent mistakes with BuildContext usage and how to fix them for more stable and error-free apps.
+- Master the use of BuildContext when opening dialogs, modals, and performing navigation to avoid unexpected behavior.
+
+## 13.Hillel Coren
+
+### Lessons learned building Invoice Ninja - Part 2
+
+Over four years ago, I had the opportunity to present "Lessons Learned Building Invoice Ninja" at Flutter Europe 2020. It was an exciting time as we had just launched our Flutter Web app: 
+
+https://demo.invoiceninja.com
+
+A lot has happened since then! In my upcoming talk, I'll share the valuable lessons we've learned along the way, covering topics such as:
+
+- Leveraging Flutter Web in a production environment
+- Deploying desktop apps across Microsoft, Apple, Snap, and Flatpak
+- Navigating the challenges of app store reviews
+- Insights into state management options
+- Techniques for optimizing app performance
+- Practical tips to enhance developer efficiency
+- Thoughts on what the future holds for Flutter
+
+Check out the original talk here: 
+
+https://www.youtube.com/watch?v=G30K5wm7j_M
+
+I look forward to exploring how far we've come since then!
+
+## 14.Joonas Kerttula
+
+### Behind the Plugin: Building Google Maps Navigation for Flutter
+
+This talk provides practical insights and best practices gained from the real-world development of google_navigation_flutter — a plugin bridging the native Google Maps Navigation SDKs with Flutter.
+
+Key topics include:
+ - High-level introduction to Google Maps Navigation
+ - Effective documentation strategies
+ - Importance of comprehensive feature coverage in the example app
+ - The benefits of a unified API design
+ - Real-world testing strategies
+ - Extending support for the Driver SDK
+
+This talk offers broadly applicable practical tips for Flutter plugin development.
+
+## 15.Robert Odrowaz-Sypniewski
+
+### Using Dart FFI for Compute-Heavy Tasks in Flutter Apps
+
+Dart is a great programming language for most apps. It's modern, strongly-typed, null-safe, and memory-safe. However, it is not particularly fast compared to other compiled languages. The solution for Flutter apps that require better performance for compute-heavy tasks is Dart Foreign Function Interface (FFI).
+
+FFI allows functions written in different languages to be called from Dart code. This means that most of the app can be written in Dart, but specific compute-intensive tasks can be implemented in a lower-level language like C, which can be up to 5x faster.
+
+We will cover the following topics:
+- What is Dart FFI?
+- What are the limitations of Dart FFI?
+- How to use Dart FFI in a Flutter app
+- What is the difference in performance between Dart and C in real-life examples?
+
+## 16.Clint Purser
+
+### Remote Controlling Robots with Flutter & WebRTC
+
+Build responsive, real-time control systems with Flutter & WebRTC! This talk tackles building 'snappy' remote robot control. Discover why Flutter & WebRTC are a great combination for handling low-latency data and video crucial for teleoperation. Learn practical Flutter integration, connecting your UI instantly to remote hardware. We'll cover essential concepts, Flutter patterns, key packages/libraries, and the core APIs you need to start building.
+
+Key Takeaways:
+
+Why WebRTC: Understand its peer-to-peer, low-latency edge crucial for real-time Flutter control UIs.
+
+Flutter Integration: Master architecture, state management, and identify key Flutter packages/libraries for connecting your app to WebRTC.
+
+Real-time UI Updates: Efficiently manage WebRTC streams (data/media) to drive reactive and performant Flutter UIs.
+
+Actionable Blueprint: Get the steps, APIs, and inspiration to build your own Flutter-based teleoperation system for robotics or IoT projects.
+
+## 17.Maneesh Tewani
+
+### Enhance the customer experience with Gemini, Flutter, and Firebase
+
+In this session we'll introduce Flutter's newly available Vertex AI SDK. 
+Takeaways:
+1. How to set up Firebase AI SDK
+2. How to develop an agentive app using Firebase AI SDK
+3. How to receive feedback using Firebase AI SDK
+
+### 
+Generating Developer-Friendly SDKs with Firebase Data Connect
+In this session, we'll go through taking a simple no-database app, generating a new schema using Gemini, and then using new generated SDKs for their app.
+Takeaways:
+1. How to set up Firebase Data Connect
+2. How to use Gemini to create new schemas for your app
+3. How to generate typesafe SDKs for your app using Firebase Data Connect
+
+## 18.Norbert Kozsir
+
+### Vibe Coding with Flutter
+
+AI is here to stay, it fundamentally changes the way we build software.
+
+In this workshop we will be vibe coding a project from scratch. Exploring various areas of AI driven development such as:
+
+- Prompting techniques
+- Limitations of AI
+- Difference between LLMs
+- Tools for using AI
+
+This workshop aims to bring a deeper understanding on how you can use AI today to improve your overall efficiency as a software engineer.
+
+## 19.Mitchell Goodwin
+
+### Flutter Team Q&A
+
+Q&A session with members of the Flutter team. Panel members are from the developer relations team, the framework team, and management.
+
+## 20.Rona Kilmer
+
+### 
+Flutteristas Panel: Reimagining DEI
+
+Join the Flutteristas as we discuss the limitations of current DEI efforts and where well-intentioned initiatives may have fallen short. We’ll look at how we can move beyond checking boxes and get back to the original spirit of DEI.
+
+## 21.Fré Dumazy
+
+### From Mobile to Web: Reusing Flutter via Multi-View Embedding
+
+Flutter Web is rapidly maturing with features like stateful hot reload and WASM compilation, but the default full-screen application model presents challenges for integration into large, existing web platforms. While iframes offer isolation, they introduce complexities in communication, styling, and context sharing. This talk is about taking a more integrated approach: embedding multi-view Flutter apps within your host web app, using custom initialization logic instead of relying on the standard generated index.html and its associated bootstrap script.
+
+We dive into how multi-view apps allow multiple, independent Flutter components to be initialized at runtime in different parts of an existing web application. These views can share state internally, communicate with the host via JS interop and benefit from deferred imports to reduce startup times.
+
+This session will show a case study of how we implemented multi-view embedding at Robaws to reuse an existing feature from our mobile Flutter app within our existing web application. We discuss the benefits, such as how our Web and Flutter team could continue to work independently and how this allowed us to easily add multiple other Flutter features without overhead. We also explain why we chose having 1 multi-view app over multiple smaller apps. Furthermore, the talk goes over some unintended improvements that adopting web had to our existing mobile apps, such as better support for large tablet screens.
+
+Finally, we go over some challenges when embedding existing features in a web app, such as URL strategies, using plugins that only support mobile platforms, etc). The talk will also include some practical approaches for easy development, such as using separate build modes (mocked standalone without embedding, local server with embedding, final hosting of static release build), handling JS interop for passing context like design tokens and localization, and managing potential CORS issues during development.
+
+This talk is aimed at Flutter developers who want to explore the possibilities of adding Flutter to their existing web applications and will focus on less explored concepts, such as deferred imports, custom initialization and Flutter views interacting with each other and with the host web app.
+
+## 22.Juan Manuel Silveira
+
+### From Math to Dynamic UIs: Applying Matrix4 Transformations in Flutter
+
+Remember those matrix operations from school you thought you'd never use again? Dive into the world of Flutter's Matrix4 and discover how fundamental operations like scale() and transform() can bring your UI to life in ways you might not have thought of.
+
+We'll demystify how Flutter utilizes matrix transformations, cleverly handling translation, rotation and scaling within its core mechanics. You'll learn how these are applied using the Transform widget, how to layer them effectively, and how Flutter's Axis system interacts with these transformations. Mastering these fundamentals is key to building compelling animations, smooth zooming functionalities, and other dynamic visual effects with precision.
+
+Going beyond theory, we'll showcase real-life examples from a production application, demonstrating how these techniques are used to handle complex and performant animations and interactions. Learn practical techniques, see matrix math turn into UI magic, and equip yourself with the skills to implement visually engaging experiences in your Flutter applications.
+
+## 23.Sofía Rey
+
+## 24.Samantha O'Brien
+
+### Multi-Platform Development with Native Feature Integration in Flutter
+
+What are the biggest challenges when targeting mobile, web, and desktop from a single codebase?
+What are the most common challenges you face when integrating native platform features (e.g., specific hardware access, platform APIs) into your Flutter apps?"
+What approaches exist for building hybrid apps that mix Flutter with existing native code?
+How do plugin dependencies and package support vary across platforms?
+What tools and libraries help streamline multi-platform development?
+
+## 25.Roman Jaquez
+
+### Flutter Best Practices: Widget Rebuilds & Animations & Complex UI Rendering
+
+Join this unconference-style session designed for interactive group discussion. Whether you want to share your insights or simply learn from others, everyone is welcome in this community-driven learning experience.
+
+What causes excessive widget rebuilds, and how can developers minimize them?
+What are the best practices for structuring widgets efficiently for performance?
+What are the common performance bottlenecks you encounter when implementing complex animations and UI elements in Flutter?
+What techniques do you use to optimize animation performance and reduce jank?
+How do you profile and debug rendering performance issues in Flutter?
+What improvements could be made to Flutter's rendering engine and animation APIs to improve performance and developer experience?
+How can developers handle responsive design across different screen sizes?
+
+### Rive: The Final Frontier of Graphics for Flutter Apps
+
+Are you ready to explore the uncharted territories of Flutter graphics? 'Rive: The Final Frontier of Graphics for Flutter Apps' will guide you through the next evolution of UI/UX. Discover how Rive's real-time interactive animations and lightweight runtime are redefining what's possible in Flutter.
+
+I'll show you how to break free from traditional static graphics and create dynamic, engaging experiences that will set your apps apart.
+
+Crucially, I'll demonstrate how Rive streamlines the designer-developer handoff, allowing for seamless collaboration and rapid iteration through its single file format and intuitive editor.
+
+You will learn how Rive's powerful state machines and intuitive editor can revolutionize your workflow and unlock the potential for truly immersive user interfaces. 
+
+Join me as we venture into the final frontier of Flutter graphics!
+
+## 26. Ahmed Hamdan
+
+### 
+Multi-Radio Flutter: Architecting Apps with UWB, BLE, and Beyond
+
+Ever wondered how Flutter could handle multiple wireless technologies like UWB and BLE in a single app? 
+In this session, we'll dive into the exciting world of multi-radio applications, stepping beyond basic examples to tackle real-life scenarios.
+
+I'll share practical insights on how these technologies complement each other, discuss the architecture patterns that help keep your code clean and maintainable, and highlight performance considerations to ensure your apps remain responsive, even when juggling multiple data streams.
+
+## 27.Eric Windmill
+
+### Flutter Team Q&A
+
+Q&A session with members of the Flutter team. Panel members are from the developer relations team, the framework team, and management.
+
+## 28.Greg Price
+
+### Writing better tests with less work
+
+Many developers feel that writing tests is just busywork — a distraction from the real work of writing the code that users will run.  And they're not wrong: in too many codebases, too many of the tests really are busywork.  A busywork test doesn't meaningfully help catch bugs, and consumes effort not only to write the test but to update it again and again as things change in the codebase.
+
+But it doesn't have to be that way.  The right techniques can make a test more effective at catching bugs now, and preventing regressions next month and next year.  The same techniques can greatly reduce the burden of maintaining tests as the codebase evolves, and make the tests easier to read, with less code, even while being more comprehensive. Done right, tests are an affordable investment today that lets your team develop faster and more confidently tomorrow, and deliver a higher-quality product.
+
+The core techniques apply in any language or framework.  Flutter offers especially rich support for writing high-quality tests right up through the UI layer, as we'll see.
+
+In this talk, I'll share the principles I've seen work, with practical tips and examples from real-world code:
+ * How to choose what layer of API a given test should operate at (beyond the binary of "unit test" vs. "integration test"), to make it both low-maintenance and high-signal.
+ * The specific tools from Flutter's rich test framework that enable writing tests at a range of different layers.
+ * How to factor out the boring setup from each test case in ways that make the test easier to understand, not harder, and enable writing more tests with less code and less maintenance.
+ * How to imitate Flutter's own "binding" system (a form of dependency injection) to let tests cleanly simulate network requests, your database, and all the Flutter plugins you use, and how to apply package:fake_async to manipulate time itself.
+ * The package:checks library, an alternative to `expect` designed for modern Dart and backward-compatible with `expect`-style matchers.
+
+I've put these principles into practice in Zulip, and coached numerous contributors to write high-quality tests there.  Some points are inspired by my experience in the upstream Flutter tree itself, which is relentless about testing all kinds of changes, and I'll draw examples from there too.
+
+## 29.Mrinal Jain
+
+### Build Spectacular TV Apps with Flutter
+
+Flutter for Mobile is released, Flutter for Web is released, Flutter for macOS, Linux, and Windows is in also released and it's really cool that Flutter officially supports six platforms. But what if I want to run my Flutter app on the TV? Unfortunately, nobody has heard of the official Flutter for TV yet. Actually, a Flutter app can be launched on TV (not AndroidTV only, but AppleTV, Tizen, and others as well). In my talk, I'm going to tell you how to do this, what difficulties and issues you will face, and how to resolve them.
+
+## 30.James O'Reilly
+
+### Firebase Studio: AI-Powered Flutter Development Abstract:
+
+Discover Firebase Studio, Google's new AI-powered, cloud-based workspace designed to supercharge your Flutter development. Integrating a CodeOSS IDE, Gemini AI assistance, and seamless FlutterFire support , Studio streamlines building, testing, and deploying full-stack Flutter apps.Learn how Studio's AI accelerates Dart/FlutterFire coding , how Flutter templates get you started faster , and how to securely infuse your apps with the Gemini API using the production-ready Vertex AI in Firebase SDK —often without a dedicated backend.Key Takeaways: Leverage Firebase Studio for Flutter; Boost productivity with AI assistance; Integrate Gemini securely via Vertex AI; Streamline your workflow from idea to deployment.
+
+## 31.Martino Yovo
+
+### When Maps Think: Geotriggers & Spatial Awareness with ArcGIS Maps SDK for Flutter
+
+What if your app could sense the world around it and respond before the user taps anything?
+
+This talk explores how to build real-time, spatially aware apps using Flutter and the official ArcGIS Maps SDK for Flutter by Esri, the global market leader in GIS software, location intelligence, and mapping. Unlike lightweight community plugins, Esri’s SDK offers enterprise-grade precision, full geospatial services, and advanced capabilities like geotriggers, routing, satellite imagery, and background location monitoring through a Flutter-native API.
+
+We’ll cover:
+
+- Geotriggers that respond when users enter/exit spatial zones
+- Offline-first awareness with background location tracking
+- Voice navigation using Flutter TTS for real-time audio directions
+- Satellite imagery and dynamic mapping layers
+- Reactive spatial UX with interfaces that adapt to user position in real time
+
+You’ll learn how to create apps that feel intelligent and responsive to movement and place. We’ll walk through a live demo that combines background geotriggers and voice-guided navigation, ideal for tourism, field ops, agriculture, or emergency response.
+
+This session is perfect for Flutter devs who want to go beyond pins on a map and into smart, geospatial UX.
+
+## 32.Mangirdas Kazlauskas
+
+## 33.Anthony Prakash
+
+### Emerging Trends and the Future of Flutter
+
+Join this unconference-style session designed for interactive group discussion. Whether you want to share your insights or simply learn from others, everyone is welcome in this community-driven learning experience.
+
+What are the most anticipated features on the Flutter roadmap?
+How are Flutter and Dart evolving to meet new technological demands?
+What features do you wish were being developed that are NOT on the roadmap?
+How can the community contribute and impact the evolution of Flutter?
+
+## 34.Simon Binder
+
+### Adopting native assets for cross-platform FFI plugins
+
+Interop with dart:ffi promises to make native libraries libraries available to apps without writing full-blown Flutter plugins or dealing with platform-specific build configurations. However, dart:ffi itself offers no mechanism to actually bundle native libraries with apps, requiring complex workarounds. Dart’s upcoming native assets feature fills this gap. This talk gives an overview of that feature and how it can be adopted by packages today. Key takeaways from this talk are:
+
+- An overview of the new @Native interop style used to call C from Dart.
+- How build hooks can be used to easily compile native code across platforms.
+- Which steps package authors can take to adopt native assets without breaking users.
+- Features to give users more control over their native dependencies.
+
+The talk introduces necessary concepts, but assumes basic familiarity with dart:ffi and writing Flutter plugins.
+
+## 35.Kali
+
+### Flutteristas Panel: Reimagining DEI
+
+Join the Flutteristas as we discuss the limitations of current DEI efforts and where well-intentioned initiatives may have fallen short. We’ll look at how we can move beyond checking boxes and get back to the original spirit of DEI.
+
+### Getting to know js_interop
+
+Developing complex web applications with Flutter often requires some JavaScript and understanding how to use js_interop is essential. We'll talk through getting started with the basics, common pitfalls and tips for success.
+
+## 36.Lawrence Wisne 
+
+### Adopting Flutter at Scale: Challenges, Wins, and the Road Ahead at Universal
+Discover why Universal Studios adopted Flutter as the foundation for its park's mobile platforms and more—and what they've learned along the way. In this panel, engineering leaders will share why they made the switch, the value they’ve seen since implementing Flutter, and the key challenges they’ve worked through during the transition. You'll hear insights into how Flutter has influenced developer productivity, improved user experience, and what opportunities lie ahead as they continue to scale the framework across the organization.
+
+## 37.Aniket Bhosale
+
+### Mastering Dart Isolates: Custom Entrypoints for Smarter Background Processing
+
+Key Takeaways and Learning Points
+
+- A deep technical look at Dart isolates, Flutter runtime, and app execution on Android/iOS
+- How the Dart runtimes start executing on Native App launches
+- Understanding the Dart isolate entry-point and customizing it for your app's needs
+- Creating custom isolates triggered by geofences, notifications, or background tasks
+- Real-world techniques to optimize resource sharing between isolates
+
+## 38.Mauricio Miguez
+
+### Mastering Scalable Theming for Custom Flutter Widgets
+
+Stop letting custom widget styling become a chaotic mess! This session delivers scalable best practices you can immediately apply to bring clarity and maintainability to your Flutter UI. We'll break down actionable patterns for effective theming, including encapsulating styles in dedicated classes for better organization, leveraging WidgetStateProperty for dynamic state-based visuals, and using WidgetStatesController to handle rebuilds. 
+
+Plus, we'll touch on hierarchical theming for managing complex component relationships. If you're looking to build robust component libraries or simply write cleaner, more maintainable UI code, this talk provides the practical insights you need to master widget theming in Flutter.
+
+Key takeaways:
+- Understand how to build well-structured theming solutions for your custom widgets that integrate effectively with your design system.
+- Learn actionable patterns for encapsulating style properties in dedicated classes to enhance code clarity and simplify style modifications.
+- Discover how to leverage WidgetStateProperty to manage visual changes based on widget states without complicating your widget's logic.
+- Understand how to effectively use WidgetStatesController to manage interaction states and optimize widget rebuilds for better performance.
+- Learn how hierarchical theming can help you manage and organize styling for complex custom widget structures.
+
+## 39.Randal Schwartz
+
+### Dart Exceptions: Best Practices
+
+Effective error handling is crucial for building robust and reliable Dart and Flutter applications. This session goes beyond basic `try`/`catch` blocks to explore the nuances of Dart's exception system. We'll delve into best practices for throwing, catching, and propagating exceptions effectively within your application architecture. Learn when and how to create meaningful custom exceptions, handle errors in asynchronous code (Futures and Streams), differentiate between Exceptions and Errors, and implement strategies for clear error reporting and monitoring in production Flutter apps. Elevate your code quality by mastering exception handling in Dart.
+
+## 40.Lucas Josefiak
+
+### Simplify app development by building widgets in isolation
+
+When was the last time you had to ensure that your new feature works well in all required states but this feature was deep down in your app and you had to use hot restart, navigate back and forth to test all required states? Do you remember how it felt? Did you try to tear your skin off your face because it was so tedious? No worries, you’re not alone😅
+
+That is how I felt for years… I wanted to make it stop. I’m happy to tell you that I built a solution! Widgetbook - an open-source Flutter package that allows you build your components in isolation.
+
+In this talk, you’ll learn:
+
+- How to build widgets in isolation
+- How to quickly test your widgets in all different states
+- How to review your own (and your team’s) UI changes in your Git environment without the need to checkout the code locally and run it to see how it looks like
+
+## 41.Aloïs Deniel
+
+### From Vectors to Pixels: mastering images
+
+Displaying an image in a Flutter app seems straightforward—just use an Image widget and you’re done, right? In reality, what appears simple on the surface conceals a surprising depth of complexity. From raster images and SVGs to icon fonts and vectors, Flutter offers a range of options for displaying images—but picking the right one for the right context is rarely as obvious as it seems.
+
+In this talk, we’ll peel back the layers of abstraction to examine how Flutter handles image rendering under the hood. You’ll learn the strengths and limitations of different image formats, explore their impact on performance and scalability, and discover how platform-specific behaviors can affect your users’ experience.
+
+What you’ll learn:
+* The internal workings of Flutter’s basic image widgets
+* Tradeoffs between rasterized images, SVGs, vector graphics, and icon fonts
+* How to choose the optimal image type for your use case
+* Performance considerations and pitfalls to avoid
+* Real-world scenarios where image type choice really matters
+* I’ll also introduce a new tool I created to streamline and simplify how we handle images at ClickUp
+
+## 42.Valentina Llavayol
+
+### From Math to Dynamic UIs: Applying Matrix4 Transformations in Flutter
+
+Remember those matrix operations from school you thought you'd never use again? Dive into the world of Flutter's Matrix4 and discover how fundamental operations like scale() and transform() can bring your UI to life in ways you might not have thought of.
+
+We'll demystify how Flutter utilizes matrix transformations, cleverly handling translation, rotation and scaling within its core mechanics. You'll learn how these are applied using the Transform widget, how to layer them effectively, and how Flutter's Axis system interacts with these transformations. Mastering these fundamentals is key to building compelling animations, smooth zooming functionalities, and other dynamic visual effects with precision.
+
+Going beyond theory, we'll showcase real-life examples from a production application, demonstrating how these techniques are used to handle complex and performant animations and interactions. Learn practical techniques, see matrix math turn into UI magic, and equip yourself with the skills to implement visually engaging experiences in your Flutter applications.
+
+## 43.Angjelko Miloshevski
+
+### The Sacred Scrolls: Crafting Your Own Slivers
+
+Delve into advanced Flutter rendering by harnessing RenderSliverMultiBoxAdaptor, RenderObjectElement, and a tailored SliverChildDelegate to craft slivers that lazily build and recycle children on-demand. 
+
+I’ll begin with a concise overview of Slivers, the RenderSliver family, and how these three classes collaborate inside Flutter’s widget–element–render pipeline.
+
+Next we will walk step-by-step through a practical example, designing and implementing a custom sliver that keeps memory low while scrolling remains butter-smooth.
+
+We will explore how to lay out and paint the sliver and its children, touching briefly on how SliverConstraints and SliverGeometry provide the scroll metrics that drive those calculations.
+
+Lastly we will make the sliver interactive—wiring up hit-testing, gestures, and a dash of custom paint to achieve the exact look and feel your design calls for.
+
+This session will deepen your understanding of Flutter’s rendering engine and give you the knowledge to create your own custom widget using a more low-level API.
+
+## 44.Leo Farias
+
+### The Fleeting Interface: Ephemeral UIs That Learn, Adapt to Context and Usage Patterns, and Vanish
+
+Abstract
+The static interface era is ending. This session explores "Fleeting Interfaces" - ephemeral UIs that intelligently evolve without explicit programming. Unlike traditional adaptive designs, these interfaces transform based on usage patterns and context, with elements appearing, adapting, and vanishing as needed. Through schema-driven architecture in Flutter, powered by Gemini for decision-making, I'll demonstrate how interfaces become living temporal experiences. Discover how combining Flutter's rendering capabilities with AI can create interfaces that respond to the fourth dimension - time - establishing a new paradigm for truly responsive digital experiences.
+
+Session Details
+See the future of UI with Flutter and Gemini AI:
+
+* Build with behaviors, not states: Schema systems that adapt naturally
+* Smart interfaces: AI-powered decisions based on how users interact
+* Live demos of tomorrow's UIs:
+  * Interfaces that shift with context and learn from use
+  * Elements that appear when needed and vanish when done
+  * Demos showing real world applications
+
+Key Takeaways
+1. Understanding the shift from static to ephemeral interfaces: UIs that appear, adapt, and vanish based on context
+2. Approach to defining interfaces through behaviors rather than explicit states
+3. Techniques for integrating Gemini AI to make UI decisions based on usage patterns
+4. Practical strategies for implementing schema-based adaptive interfaces in Flutter
+5. Real-world applications demonstrated through adaptive dashboard and cooking app examples
+
+## 45.Mauricio Miguez
+
+### Mastering Scalable Theming for Custom Flutter Widgets
+
+Stop letting custom widget styling become a chaotic mess! This session delivers scalable best practices you can immediately apply to bring clarity and maintainability to your Flutter UI. We'll break down actionable patterns for effective theming, including encapsulating styles in dedicated classes for better organization, leveraging WidgetStateProperty for dynamic state-based visuals, and using WidgetStatesController to handle rebuilds. 
+
+Plus, we'll touch on hierarchical theming for managing complex component relationships. If you're looking to build robust component libraries or simply write cleaner, more maintainable UI code, this talk provides the practical insights you need to master widget theming in Flutter.
+
+Key takeaways:
+- Understand how to build well-structured theming solutions for your custom widgets that integrate effectively with your design system.
+- Learn actionable patterns for encapsulating style properties in dedicated classes to enhance code clarity and simplify style modifications.
+- Discover how to leverage WidgetStateProperty to manage visual changes based on widget states without complicating your widget's logic.
+- Understand how to effectively use WidgetStatesController to manage interaction states and optimize widget rebuilds for better performance.
+- Learn how hierarchical theming can help you manage and organize styling for complex custom widget structures.
