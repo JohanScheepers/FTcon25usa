@@ -1,6 +1,8 @@
 # Fluttercon USA 2025 Countdown App
 
-A simple Flutter application that displays a countdown timer to Fluttercon USA 2025.
+A Flutter application designed to keep you informed about Fluttercon USA 2025.
+It features a real-time countdown timer to the event and provides a detailed list
+of speakers, their talks, and talk descriptions.
 
 ## Table of Contents
 * [1. Features](#1-features)
@@ -16,6 +18,7 @@ A simple Flutter application that displays a countdown timer to Fluttercon USA 2
 
 *   Displays remaining days, hours, minutes, and seconds until Fluttercon USA 2025.
 *   Shows a message if the event date has passed.
+*   Lists event speakers, their talk titles, and detailed talk descriptions.
 *   Simple and clean user interface.
 *   Supports light and dark themes.
 
@@ -23,7 +26,7 @@ A simple Flutter application that displays a countdown timer to Fluttercon USA 2
 
 ## 2. Target Event Date
 
-By default, this app counts down to **March 7, 2025, 09:00:00 local time**.
+By default, this app counts down to **June 25, 2025, 09:00:00 local time**.
 You can modify this target date easily (see [Customization](#customization)).
 
 [Back to Top](#table-of-contents)
@@ -59,12 +62,15 @@ The project follows a standard Flutter application structure:
 ```
 lib/
 ├── main.dart                 # App entry point
-└── src/
+└── src/                      # Source code
     ├── app.dart              # MaterialApp setup, theming
+    ├── models/
+    │   └── speaker_model.dart  # Data models for Speaker and Talk
     ├── screens/
-    │   └── countdown_screen.dart # Main screen with the countdown logic
+    │   └── countdown_screen.dart # Main screen with countdown & speaker list
     ├── utils/
-    │   └── app_constants.dart  # Constants like target date, UI values
+    │   ├── app_constants.dart  # Constants like target date, UI values
+    │   └── speakers.dart       # Raw speaker data (Dart List)
     └── widgets/
         └── time_unit_display.dart # Widget to display D/H/M/S units
 ```
@@ -80,7 +86,7 @@ lib/
     ```dart
     /// The target date and time for Fluttercon USA 2025.
     /// Change this to your desired event date and time.
-    final DateTime kFlutterconTargetDate = DateTime(2025, 3, 7, 9, 0, 0); // Year, Month, Day, Hour, Minute, Second
+    final DateTime kFlutterconTargetDate = DateTime(2025, 6, 25, 9, 0, 0); // Year, Month, Day, Hour, Minute, Second
     ```
 3.  Save the file and hot reload/restart your application.
 
