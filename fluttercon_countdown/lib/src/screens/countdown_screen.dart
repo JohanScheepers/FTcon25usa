@@ -27,31 +27,12 @@ class _CountdownScreenState extends State<CountdownScreen> {
   void initState() {
     super.initState();
     _updateTimeRemaining();
-    _loadSpeakers();
+    _initialLoadSpeakers(); // Renamed for clarity, still loads speakers initially
     if (!_eventPassed) {
       _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
         _updateTimeRemaining();
       });
     }
-  }
-
-  /// Loads speaker data from the JSON asset file.
-  void _loadSpeakers() {
-    setState(() {
-      _isLoadingSpeakers = true;
-      _speakerLoadError = null;
-    });
-    try {
-      // Use the speakers data directly from the imported speakers.dart file
-      // The 'speakers' variable in speakers.dart is dynamic, but it's a List of Maps.
-      final List<dynamic> data = speaker_data.speakers;
-      _speakers = data
-          .map((item) => Speaker.fromJson(item as Map<String, dynamic>))
-          .toList();
-    } catch (e) {
-      _speakerLoadError = 'Failed to load speaker data: $e';
-    }
-    if (mounted) setState(() => _isLoadingSpeakers = false);
   }
 
   /// Calculates the time remaining until [kFlutterconTargetDate] and updates the state.
@@ -71,6 +52,24 @@ class _CountdownScreenState extends State<CountdownScreen> {
     }
   }
 
+  /// Loads speaker data initially.
+  void _initialLoadSpeakers() {
+    setState(() {
+      _isLoadingSpeakers = true;
+      _speakerLoadError = null;
+    });
+    try {
+      // Use the speakers data directly from the imported speakers.dart file
+      // The 'speakers' variable in speakers.dart is dynamic, but it's a List of Maps.
+      final List<dynamic> data = speaker_data.speakers;
+      _speakers = data
+          .map((item) => Speaker.fromJson(item as Map<String, dynamic>))
+          .toList();
+    } catch (e) {
+      _speakerLoadError = 'Failed to load speaker data: $e';
+    }
+    if (mounted) setState(() => _isLoadingSpeakers = false);
+  }
   @override
   void dispose() {
     _timer?.cancel();
@@ -91,13 +90,6 @@ class _CountdownScreenState extends State<CountdownScreen> {
       appBar: AppBar(
         title: const Text(kAppTitle),
         backgroundColor: theme.colorScheme.primaryContainer,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh),
-            tooltip: 'Reload Speakers',
-            onPressed: _loadSpeakers,
-          ),
-        ],
       ),
       body: Column(
         children: [
